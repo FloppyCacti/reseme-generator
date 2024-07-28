@@ -1,6 +1,7 @@
 import { PersonInfo } from "./PersonInfo.jsx";
 import { SchoolInfo } from "./SchoolInfo.jsx";
 import { WorkInfo } from "./WorkInfo.jsx";
+import { ShowResume } from "./Resume.jsx";
 import { useState } from "react";
 import "../styles/Builder.css";
 
@@ -10,7 +11,6 @@ function Builder() {
   const [phone, setPhone] = useState("");
   const [school, setSchool] = useState("");
   const [degree, setDegree] = useState("");
-  const [location, setLocation] = useState("");
   const [schoolStartDate, setSchoolStartDate] = useState("");
   const [schoolEndDate, setSchoolEndDate] = useState("");
   const [position, setPosition] = useState("");
@@ -34,8 +34,6 @@ function Builder() {
           setSchool={setSchool}
           degree={degree}
           setDegree={setDegree}
-          location={location}
-          setLocation={setLocation}
           schoolStartDate={schoolStartDate}
           setSchoolStartDate={setSchoolStartDate}
           schoolEndDate={schoolEndDate}
@@ -52,6 +50,20 @@ function Builder() {
           setJobEndDate={setJobEndDate}
         />
       </div>
+      <ShowResume
+        name={name}
+        email={email}
+        phone={phone}
+        school={school}
+        degree={degree}
+        location={location}
+        schoolStartDate={schoolStartDate}
+        schoolEndDate={schoolEndDate}
+        position={position}
+        company={company}
+        jobStartDate={jobStartDate}
+        jobEndDate={jobEndDate}
+      />
     </>
   );
 }
