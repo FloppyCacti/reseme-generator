@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import { Builder } from "./components/Builder.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  return (
+    <>
+      <Builder />
+    </>
+  );
 }
 
 export default App;
