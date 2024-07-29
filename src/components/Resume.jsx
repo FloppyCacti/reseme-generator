@@ -18,13 +18,14 @@ function ShowResume({
       <div id="resume-container">
         <div id="resume-info">
           <h1>{name}</h1>
-          <hr></hr>
           <div className="resume-horizontal">
             <h3>{email}</h3>
             <h3>{phone}</h3>
           </div>
         </div>
+        <hr></hr>
         <div id="resume-school">
+          <h2 id="section-title">Education</h2>
           <div className="resume-horizontal">
             <h3>{degree}</h3>
             <h3>
@@ -33,7 +34,9 @@ function ShowResume({
           </div>
           <h3>{school}</h3>
         </div>
+        <hr></hr>
         <div id="resume-job">
+          <h2 id="section-title">Experience</h2>
           <div className="resume-horizontal">
             <h3>{position}</h3>
             <h3>

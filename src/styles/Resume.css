@@ -21,7 +21,11 @@ h1 {
 
 hr {
   height: 1px;
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
   background-color: #000000;
+}
+
+h2#section-title {
+  margin: 0px auto;
 }
