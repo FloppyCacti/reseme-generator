@@ -18,6 +18,7 @@ function Builder() {
   const [jobStartDate, setJobStartDate] = useState("");
   const [jobEndDate, setJobEndDate] = useState("");
   const [educationContainer, setEducationContainer] = useState([]);
+  const [workContainer, setWorkContainer] = useState([]);
 
   return (
     <>
@@ -51,6 +52,8 @@ function Builder() {
           setJobStartDate={setJobStartDate}
           jobEndDate={jobEndDate}
           setJobEndDate={setJobEndDate}
+          container={workContainer}
+          setContainer={setWorkContainer}
         />
       </div>
       <ShowResume
@@ -67,6 +70,7 @@ function Builder() {
         jobStartDate={jobStartDate}
         jobEndDate={jobEndDate}
         educationContainer={educationContainer}
+        workContainer={workContainer}
       />
     </>
   );
