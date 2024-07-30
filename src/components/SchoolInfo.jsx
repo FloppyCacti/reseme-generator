@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "../styles/container.css";
 import "../styles/SchoolInfo.css";
 import "./Resume";
@@ -12,9 +12,9 @@ function SchoolInfo({
   setSchoolStartDate,
   schoolEndDate,
   setSchoolEndDate,
+  container,
+  setContainer,
 }) {
-  const [educationContainer, setEducationContainer] = useState([]);
-
   const schoolRef = useRef(null);
   const degreeRef = useRef(null);
   const startDateRef = useRef(null);
@@ -27,7 +27,7 @@ function SchoolInfo({
       startDate: startDate,
       endDate: endDate,
     };
-    setEducationContainer((prev) => [...prev, obj]);
+    setContainer((prev) => [...prev, obj]);
   };
 
   const handleAdd = () => {
@@ -46,7 +46,7 @@ function SchoolInfo({
   };
 
   const handleRemove = (index) => {
-    setEducationContainer((prev) => prev.filter((item, i) => i !== index));
+    setContainer((prev) => prev.filter((item, i) => i !== index));
   };
 
   return (
@@ -95,7 +95,7 @@ function SchoolInfo({
         <button onClick={handleAdd}>Add</button>
       </div>
       <div id="educationContainer">
-        {educationContainer.map((element, index) => (
+        {container.map((element, index) => (
           <div key={index}>
             <div>
               <h4>
