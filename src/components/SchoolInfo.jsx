@@ -93,21 +93,23 @@ function SchoolInfo({
           ></input>
         </div>
         <button onClick={handleAdd}>Add</button>
-        <div id="educationContainer">
-          {container.map((element, index) => (
-            <div key={index}>
-              <div>
-                <h4>
-                  {element.school} - {element.degree}
-                </h4>
-                <h4>
-                  {element.startDate} - {element.endDate}
-                </h4>
+        {container.length !== 0 && (
+          <div id="educationContainer">
+            {container.map((element, index) => (
+              <div key={index}>
+                <div>
+                  <h4>
+                    {element.school} - {element.degree}
+                  </h4>
+                  <h4>
+                    {element.startDate} - {element.endDate}
+                  </h4>
+                </div>
+                <button onClick={() => handleRemove(index)}>Remove</button>
               </div>
-              <button onClick={() => handleRemove(index)}>Remove</button>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
