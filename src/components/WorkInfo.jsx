@@ -1,4 +1,5 @@
 import "../styles/container.css";
+import "../styles/workInfo.css";
 
 function WorkInfo({
   position,
@@ -49,6 +50,7 @@ function WorkInfo({
             onChange={(e) => setJobEndDate(e.target.value)}
           ></input>
         </div>
+        <button>Add</button>
       </div>
     </>
   );
