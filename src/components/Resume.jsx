@@ -13,6 +13,7 @@ function ShowResume({
   jobStartDate,
   jobEndDate,
   educationContainer,
+  workContainer,
 }) {
   return (
     <>
@@ -49,6 +50,17 @@ function ShowResume({
         <hr></hr>
         <div id="resume-job">
           <h2 id="section-title">Experience</h2>
+          {workContainer.map((element, index) => (
+            <div key={index}>
+              <div className="resume-horizontal">
+                <h3>{element.position}</h3>
+                <h3>
+                  {element.startDate} - {element.endDate}
+                </h3>
+              </div>
+              <h3>{element.company}</h3>
+            </div>
+          ))}
           <div className="resume-horizontal">
             <h3>{position}</h3>
             <h3>
