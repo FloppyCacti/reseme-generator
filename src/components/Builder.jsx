@@ -17,6 +17,7 @@ function Builder() {
   const [company, setCompany] = useState("");
   const [jobStartDate, setJobStartDate] = useState("");
   const [jobEndDate, setJobEndDate] = useState("");
+  const [educationContainer, setEducationContainer] = useState([]);
 
   return (
     <>
@@ -38,6 +39,8 @@ function Builder() {
           setSchoolStartDate={setSchoolStartDate}
           schoolEndDate={schoolEndDate}
           setSchoolEndDate={setSchoolEndDate}
+          container={educationContainer}
+          setContainer={setEducationContainer}
         />
         <WorkInfo
           position={position}
@@ -63,6 +66,7 @@ function Builder() {
         company={company}
         jobStartDate={jobStartDate}
         jobEndDate={jobEndDate}
+        educationContainer={educationContainer}
       />
     </>
   );
